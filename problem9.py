@@ -12,5 +12,9 @@ def compute():
                 if c * c == a*a + b*b:
                     return a*b*c
 
-answer = compute()
-print("Answer:", answer)
+def main():
+    """Prints the answer."""
+    answer = compute()
+    print("Answer:", answer)
+
+main()

@@ -1,19 +1,23 @@
-def isPalindrome(inputString):
+"""
+This solves problem 4 of the project euler problems.
+Found at https://projecteuler.net/problem=4
+"""
 
-	inputString = str(inputString)
-	
-	if inputString == inputString[ : : -1]:
-		return True
-	else:
-		return False
+def is_palindrome(input_string):
+    """Checks if a given input is a palindrome or not."""
+    input_string = str(input_string)
+    return bool(input_string == input_string[ : : -1])
 
-palindromeList = []
+def main():
+    """Finds the biggest palindrome that is the product of two 3-digit numbers."""
+    palindrome_list = []
 
-for x in range(100, 1000):
-	for y in range(100, 1000):
-		product = x * y
-		if isPalindrome(product):
-			palindromeList.append(product)
+    for x in range(100, 1000):
+        for y in range(100, 1000):
+            product = x * y
+            if is_palindrome(product):
+                palindrome_list.append(product)
 
-print(max(palindromeList))
+    print(max(palindrome_list))
 
+main()
